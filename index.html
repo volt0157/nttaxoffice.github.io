@@ -1,167 +1,78 @@
 <!DOCTYPE html>
-<!-- Declares the document type and version of HTML being used (HTML5) -->
-
 <html lang="el">
-<!-- Root element with "el" language attribute indicating Greek language content -->
-
-<!-- 
-  The head section contains metadata about the document, 
-  such as character encoding, viewport settings, and links to external stylesheets or scripts.
--->
 <head>
-  <!-- Specify UTF-8 character encoding to ensure proper text rendering of special characters -->
   <meta charset="UTF-8">
-
-  <!-- 
-    Viewport meta tag controls how the page appears on mobile devices
-    width=device-width: Makes page width match device screen width
-    initial-scale=1.0: Sets initial zoom level when page is loaded
-    This is essential for responsive design
-  -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 
-    Description meta tag provides summary of page content for search engines
-    This improves SEO and appears in search engine results
-  -->
   <meta name="description" content="NT - TAXOFFICE προσφέρει επαγγελματικές λογιστικές υπηρεσίες, φορολογική υποστήριξη και συμβουλευτικές υπηρεσίες για επιχειρήσεις και ιδιώτες.">
-
-  <!-- 
-    Page title shown in browser tab and search engine results
-    Important for SEO and user experience
-  -->
   <title>NT - TAXOFFICE | Λογιστικές Υπηρεσίες</title>
-
-  <!-- 
-    Link to external CSS file - separates content from presentation
-    The browser will load this stylesheet to apply styling to the HTML elements
-  -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- 
-    DNS-prefetch and preconnect tags improve performance by establishing
-    early connections to Google Fonts servers before they're needed
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- 
-    Imports Poppins and Roboto font families with various weights
-    Makes these fonts available for use in the CSS styles
-    The &display=swap parameter enables font-display: swap for better performance
-  -->
   <link 
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" 
     rel="stylesheet"
   >
-
-  <!-- 
-    Loads Font Awesome library for icons via CDN
-    This script provides access to a library of vector icons to use throughout the site
-  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 
 <body>
-    <!-- 
-      Skip link for accessibility - allows keyboard users to bypass navigation 
-      and jump straight to main content
-    -->
     <a class="skip-link" href="#main-content">Πήγαινε στο κύριο περιεχόμενο</a>
     
-    <!-- 
-      Header section contains site identity (logo and tagline)
-      Usually appears at the top of every page
-    -->
     <header>
         <div class="header-container">
-            <!-- Company logo as text/heading instead of an image -->
             <div class="logo-container">
                 <h1>NT <span class="highlight">TAXOFFICE</span></h1>
             </div>
-            <!-- Tagline describes the business in a concise phrase -->
             <p class="tagline">Επαγγελματικές Λογιστικές Υπηρεσίες</p>
         </div>
     </header>
 
-    <!-- 
-      Navigation section with aria-label for accessibility
-      Contains the main menu for site navigation
-    -->
     <nav aria-label="Κύρια πλοήγηση">
         <div class="nav-container">
-            <!-- 
-              Mobile menu toggle button - only visible on small screens
-              Controls the display of the navigation menu on mobile devices
-            -->
             <button class="mobile-menu-toggle" aria-label="Μενού">
-                <i class="fas fa-bars"></i> <!-- Hamburger icon from Font Awesome -->
+                <i class="fas fa-bars"></i>
             </button>
-            <!-- 
-              Main navigation menu as unordered list
-              Each list item contains a link to a section on the page
-            -->
             <ul class="nav-menu">
-                <!-- Each menu item has an icon and text for better visual recognition -->
                 <li><a href="#main-services"><i class="fas fa-briefcase"></i> Κύριες Υπηρεσίες</a></li>
                 <li><a href="#services-professionals"><i class="fas fa-building"></i> Επαγγελματίες</a></li>
                 <li><a href="#services-payroll"><i class="fas fa-file-invoice-dollar"></i> Μισθοδοσία</a></li>
                 <li><a href="#services-individuals"><i class="fas fa-user"></i> Ιδιώτες</a></li>
                 <li><a href="#consultant-services"><i class="fas fa-handshake"></i> Σύμβουλοι</a></li>
-                <!-- Contact button styled differently to stand out -->
                 <li><a href="#contact" class="contact-btn"><i class="fas fa-envelope"></i> Επικοινωνία</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 
-      Main content area with ID that matches skip link target
-      Contains all the primary content sections of the page
-    -->
     <main id="main-content">
-        <!-- 
-          First section introduces the main services
-          Uses id attribute for direct linking from navigation
-        -->
         <section id="main-services" class="services-section">
-            <!-- Section header with icon and title -->
             <div class="section-header">
                 <span class="section-icon"><i class="fas fa-check-circle"></i></span>
                 <h2>Υπηρεσίες Λογιστικής & Φορολογικής Υποστήριξης</h2>
             </div>
             <div class="services-content">
-                <!-- Introductory paragraphs explaining the services -->
                 <p>H Εταιρεία μας εξυπηρετεί επιχειρήσεις από όλους τους κλάδους της επιχειρηματικής και οικονομικής δραστηριότητας. Η χρήση των υπηρεσιών μας αποτελεί μια σημαντική επένδυση εξασφάλισης και επέκτασης του επιχειρηματικού εγχειρήματος κάθε επαγγελματία.</p>
                 
                 <p>Συγκεκριμένα, οι υπηρεσίες που προσφέρει η εταιρεία NT - TAXOFFICE είναι οι εξής:</p>
                 
-                <!-- 
-                  Grid layout of service cards highlighting main service categories
-                  Each card contains an icon and heading
-                -->
                 <div class="services-grid">
-                    <!-- Service card for Professionals -->
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-building"></i>
                         </div>
                         <h3>Επαγγελματίες & Νομικά πρόσωπα</h3>
                     </div>
-                    <!-- Service card for Individuals -->
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-user"></i>
                         </div>
                         <h3>Φυσικά Πρόσωπα (Μη επαγγελματίες)</h3>
                     </div>
-                    <!-- Service card for Payroll services -->
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-file-invoice-dollar"></i>
                         </div>
                         <h3>Υπηρεσίες Μισθοδοσίας (Εργασιακά)</h3>
                     </div>
-                    <!-- Service card for Consulting services -->
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-handshake"></i>
@@ -172,15 +83,7 @@
             </div>
         </section>
 
-        <!-- 
-          Container for detailed service sections
-          Groups related content for styling purposes
-        -->
         <div class="main-content">
-            <!-- 
-              Detailed section about services for professionals
-              Contains specific features and benefits
-            -->
             <section id="services-professionals" class="service-detail-section">
                 <div class="section-header">
                     <span class="section-icon"><i class="fas fa-building"></i></span>
@@ -189,10 +92,6 @@
                 <div class="services-content">
                     <div class="service-detail-wrapper">
                         <div class="service-text">
-                            <!-- 
-                              Feature list with checkmarks
-                              Each item has an icon and descriptive text
-                            -->
                             <ul class="feature-list">
                                 <li>
                                     <span class="feature-icon"><i class="fas fa-check"></i></span>
@@ -216,10 +115,6 @@
                 </div>
             </section>
 
-            <!-- 
-              Detailed section about payroll services
-              Includes introduction and feature list
-            -->
             <section id="services-payroll" class="service-detail-section">
                 <div class="section-header">
                     <span class="section-icon"><i class="fas fa-file-invoice-dollar"></i></span>
@@ -228,9 +123,7 @@
                 <div class="services-content">
                     <div class="service-detail-wrapper">
                         <div class="service-text">
-                            <!-- Introductory paragraph explains who the service is for -->
                             <p>Απευθύνονται κυρίως σε επιχειρήσεις, αλλά και σε φυσικά πρόσωπα-εργαζομένους που ζητούν πληροφορίες για θέματα Εργατικής Νομοθεσίας.</p>
-                            <!-- Feature list with checkmarks for specific services -->
                             <ul class="feature-list">
                                 <li>
                                     <span class="feature-icon"><i class="fas fa-check"></i></span>
@@ -254,10 +147,6 @@
                 </div>
             </section>
 
-            <!-- 
-              Detailed section about services for individuals
-              Includes introduction and feature list
-            -->
             <section id="services-individuals" class="service-detail-section">
                 <div class="section-header">
                     <span class="section-icon"><i class="fas fa-user"></i></span>
@@ -266,9 +155,7 @@
                 <div class="services-content">
                     <div class="service-detail-wrapper">
                         <div class="service-text">
-                            <!-- Introductory paragraph explains target audience -->
                             <p>Απευθυνόμαστε κυρίως σε Μισθωτούς & Συνταξιούχους, αλλά και εισοδηματίες.</p>
-                            <!-- Feature list with checkmarks for specific services -->
                             <ul class="feature-list">
                                 <li>
                                     <span class="feature-icon"><i class="fas fa-check"></i></span>
@@ -292,10 +179,6 @@
                 </div>
             </section>
 
-            <!-- 
-              Detailed section about consulting services
-              Uses a different layout with badge-style features
-            -->
             <section id="consultant-services" class="service-detail-section">
                 <div class="section-header">
                     <span class="section-icon"><i class="fas fa-handshake"></i></span>
@@ -304,12 +187,7 @@
                 <div class="services-content">
                     <div class="service-detail-wrapper">
                         <div class="service-text">
-                            <!-- Introductory paragraph explains the consulting approach -->
                             <p>Συνεργάτες μας, με πολύχρονη εμπειρία και επιτυχημένη πορεία στο τομέα και στην ειδικότητα τους, έρχονται να συντονίσουν, να προτείνουν, να επιλύσουν προβλήματα, μαζί με τον/την επιχειρηματία.</p>
-                            <!-- 
-                              Badge-style feature display instead of list
-                              Each badge contains an icon and short text
-                            -->
                             <div class="consultant-badges">
                                 <div class="badge">
                                     <i class="fas fa-chart-line"></i>
@@ -334,29 +212,17 @@
             </section>
         </div>
 
-        <!-- 
-          Contact section with company information and call-to-action
-          This is a crucial conversion section for business websites
-        -->
         <section id="contact" class="contact-section">
             <div class="contact-container">
-                <!-- 
-                  Contact card contains all contact information and action button
-                  Presented in a visually distinct card format
-                -->
                 <div class="contact-card">
                     <div class="contact-info">
-                        <!-- 
-                          Contact items with icons and text
-                          Each item shows a different contact method
-                        -->
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <strong>Διεύθυνση</strong>
-								<p><a href="https://g.co/kgs/fyNg9ag">3ης Σεπτεμβρίου 103</a>
+                                <p><a href="https://g.co/kgs/fyNg9ag">3ης Σεπτεμβρίου 103</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -365,7 +231,6 @@
                             </div>
                             <div>
                                 <strong>Τηλέφωνο</strong>
-                                <!-- Clickable phone number for easy calling on mobile devices -->
                                 <p><a href="tel:+302108222950">+30 210 8222 950</a></p>
                             </div>
                         </div>
@@ -375,38 +240,25 @@
                             </div>
                             <div>
                                 <strong>Email</strong>
-                                <!-- 
-                                  Clickable email with rel attribute for security
-                                  noopener noreferrer prevents potential security issues
-                                -->
                                 <p><a href="mailto:ntallas@ntallas.com" rel="noopener noreferrer">ntallas@ntallas.com</a></p>
                             </div>
                         </div>
                     </div>
-                    <!-- Call-to-action button for contact form -->
                     <div class="contact-action">
-                        <a href="#" class="cta-button contact-cta">Στείλτε Μήνυμα</a>
+                        <a href="contact.html" class="cta-button contact-cta">Στείλτε Μήνυμα</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 
-      Footer section with site information and links
-      Typically contains copyright, navigation, and contact info
-    -->
     <footer>
         <div class="footer-content">
-            <!-- Footer logo section mirrors header for brand consistency -->
             <div class="footer-logo">
                 <h3>NT <span class="highlight">TAXOFFICE</span></h3>
                 <p>Επαγγελματικές Λογιστικές Υπηρεσίες</p>
             </div>
-            <!-- 
-              Quick navigation links repeated from main navigation
-              Helps users navigate without scrolling back to top
-            -->
+            
             <div class="footer-links">
                 <h4>Γρήγορη Πλοήγηση</h4>
                 <ul>
@@ -417,63 +269,20 @@
                     <li><a href="#consultant-services">Σύμβουλοι</a></li>
                 </ul>
             </div>
-            <!-- 
-              Contact information repeated in footer
-              Makes it easy to find contact details from any page position
-            -->
+            
             <div class="footer-contact">
                 <h4>Επικοινωνία</h4>
-                <p><i class="fas fa-map-marker-alt"></i><a href="https://g.co/kgs/fyNg9ag"> 3ης Σεπτεμβρίου 103</a>
+                <p><i class="fas fa-map-marker-alt"></i><a href="https://g.co/kgs/fyNg9ag"> 3ης Σεπτεμβρίου 103</a></p>
                 <p><i class="fas fa-phone-alt"></i> <a href="tel:+302108222950"> +30 210 8222 950</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:ntallas@ntallas.com"> antallas@gmail.com</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:ntallas@ntallas.com"> ntallas@ntallas.com</a></p>
             </div>
         </div>
-        <!-- Copyright section at bottom of footer -->
+        
         <div class="footer-bottom">
             <p>&copy; 2025 NT - TAXOFFICE. Με επιφύλαξη παντός δικαιώματος.</p>
         </div>
     </footer>
 
-    <!-- 
-      JavaScript code for interactivity
-      Placed at end of body for better page load performance
-    -->
-    <script>
-        // Mobile menu toggle functionality
-        // Adds/removes 'active' class to show/hide navigation on mobile
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-
-        // Smooth scrolling implementation for all anchor links
-        // Makes page scroll smoothly to target section when clicking navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default jump behavior
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth' // Enables smooth scrolling animation
-                });
-                // Close mobile menu after clicking a link for better UX
-                document.querySelector('.nav-menu').classList.remove('active');
-            });
-        });
-
-        // Animation on scroll using Intersection Observer API
-        // Detects when sections enter viewport and adds 'in-view' class for animations
-        const sections = document.querySelectorAll('section');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
-            });
-        }, { threshold: 0.1 }); // Triggers when 10% of element is visible
-        
-        // Apply observer to all sections
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
